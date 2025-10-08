@@ -14,9 +14,10 @@ sem_t emptySlots;
 sem_t filledSlots; 
 sem_t semMem;
 
+atomic<int> producedCount{0}; 
+atomic<int> consumedCount{0};
+
 int MEM_SIZE;
-int producedCount = 0;
-int consumedCount = 0;
 int prodPos = 0;
 int consPos = 0;
 
@@ -51,7 +52,6 @@ void* producer(void* arg) {
 
         if (producedCount >= NUM_IT) {
             sem_post(&semMem);
-            sem_post(&emptySlots);
             break;
         }
 
@@ -76,7 +76,6 @@ void* consumer(void* arg) {
 
         if (consumedCount >= NUM_IT) {
             sem_post(&semMem);
-            sem_post(&filledSlots);
             break;
         }
 
