@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 plt.style.use('seaborn-darkgrid')
 plt.rcParams.update({'figure.figsize': (10,6), 'font.size': 12})
 
-csv_path = "ocupacao_buffer.csv"
+csv_path = "Results/ocupacao_buffer.csv"
 df = pd.read_csv(csv_path)
 
 x = df['operacao']
@@ -19,7 +19,7 @@ plt.ylabel('Ocupação do buffer')
 plt.title('Ocupação do buffer ao longo das operações')
 plt.grid(True)
 plt.tight_layout()
-plt.savefig('ocupacao_buffer_line.png', dpi=150)
-print("Salvo: ocupacao_buffer_line.png")
+plt.savefig('Results/ocupacao_buffer.png', dpi=150)
+print("Salvo: ocupacao_buffer.png")
 
 plt.show()

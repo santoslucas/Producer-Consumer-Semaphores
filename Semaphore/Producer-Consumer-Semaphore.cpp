@@ -139,7 +139,7 @@ int main() {
 
     cout << "\nTempo total de execucao: " << elapsed.count() << " segundos\n";
 
-    ofstream csv("ocupacao_buffer.csv");
+    ofstream csv("Results/ocupacao_buffer.csv");
     csv << "operacao,ocupacao\n";
     for (size_t i = 0; i < bufferOccupation.size(); ++i)
         csv << i << "," << bufferOccupation[i] << "\n";
