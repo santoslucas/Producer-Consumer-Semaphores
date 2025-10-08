@@ -52,6 +52,7 @@ void* producer(void* arg) {
 
         if (producedCount >= NUM_IT) {
             sem_post(&semMem);
+            sem_post(&emptySlots);
             break;
         }
 
@@ -76,6 +77,7 @@ void* consumer(void* arg) {
 
         if (consumedCount >= NUM_IT) {
             sem_post(&semMem);
+            sem_post(&filledSlots);
             break;
         }
 

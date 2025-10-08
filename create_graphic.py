@@ -3,7 +3,6 @@ import matplotlib
 matplotlib.use('Agg') 
 import matplotlib.pyplot as plt
 
-
 plt.style.use('seaborn-darkgrid')
 plt.rcParams.update({'figure.figsize': (10,6), 'font.size': 12})
 
