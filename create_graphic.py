@@ -23,13 +23,4 @@ plt.tight_layout()
 plt.savefig('ocupacao_buffer_line.png', dpi=150)
 print("Salvo: ocupacao_buffer_line.png")
 
-plt.figure()
-plt.hist(y, bins=range(0, max(y)+2), color='tab:green', edgecolor='black', align='left')
-plt.xlabel('Ocupação do buffer')
-plt.ylabel('Frequência')
-plt.title('Distribuição da ocupação do buffer')
-plt.tight_layout()
-plt.savefig('ocupacao_buffer_hist.png', dpi=150)
-print("Salvo: ocupacao_buffer_hist.png")
-
 plt.show()
